@@ -17,7 +17,7 @@
 
 
 Name:           amazon-dracut-config
-Version:        0.0.2
+Version:        0.0.3
 Release:        0
 Summary:        Amazon Dracut config overlay files
 License:        Apache-2.0
@@ -25,6 +25,8 @@ Group:          System/Management
 URL:            https://github.com/SUSE-Enceladus/amazon-dracut-config
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:  dracut
+Provides:       dracut-instance-change-config
+Conflicts:      otherproviders(dracut-instance-change-config)
 BuildArch:      noarch
 
 %description
@@ -61,5 +63,3 @@ install -D -m 644 etc/dracut.conf.d/11-resume.conf \
 %config %{_sysconfdir}/dracut.conf.d/11-resume.conf
 
 %changelog
-
-
