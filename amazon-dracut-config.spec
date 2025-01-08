@@ -48,7 +48,7 @@ install -D -m 644 usr/lib/dracut/dracut.conf.d/07-virtio.conf \
 install -D -m 644 usr/lib/dracut/dracut.conf.d/07-xfs.conf \
     %{buildroot}/usr/lib/dracut/dracut.conf.d/07-xfs.conf
 install -D -m 644 usr/lib/dracut/dracut.conf.d/11-resume.conf \
-    %{buildroot}usr/lib/dracut/dracut.conf.d/11-resume.conf
+    %{buildroot}/usr/lib/dracut/dracut.conf.d/11-resume.conf
 
 %check
 
