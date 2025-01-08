@@ -17,7 +17,7 @@
 
 
 Name:           amazon-dracut-config
-Version:        0.0.3
+Version:        0.0.4
 Release:        0
 Summary:        Amazon Dracut config overlay files
 License:        Apache-2.0
