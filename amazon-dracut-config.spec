@@ -17,7 +17,7 @@
 
 
 Name:           amazon-dracut-config
-Version:        0.0.3
+Version:        0.0.4
 Release:        0
 Summary:        Amazon Dracut config overlay files
 License:        Apache-2.0
@@ -37,29 +37,31 @@ BuildArch:      noarch
 %build
 
 %install
-install -D -m 644 etc/dracut.conf.d/07-aws-type-switch.conf \
-    %{buildroot}%{_sysconfdir}/dracut.conf.d/07-aws-type-switch.conf
-install -D -m 644 etc/dracut.conf.d/07-nvme.conf \
-    %{buildroot}%{_sysconfdir}/dracut.conf.d/07-nvme.conf
+install -D -m 644 usr/lib/dracut/dracut.conf.d/07-aws-type-switch.conf \
+    %{buildroot}/usr/lib/dracut/dracut.conf.d/07-aws-type-switch.conf
+install -D -m 644 usr/lib/dracut/dracut.conf.d/07-nvme.conf \
+    %{buildroot}/usr/lib/dracut/dracut.conf.d/07-nvme.conf
 install -D -m 644 etc/dracut.conf.d/07-ext4.conf \
-    %{buildroot}%{_sysconfdir}/dracut.conf.d/07-ext4.conf
-install -D -m 644 etc/dracut.conf.d/07-virtio.conf \
-    %{buildroot}%{_sysconfdir}/dracut.conf.d/07-virtio.conf
-install -D -m 644 etc/dracut.conf.d/07-xfs.conf \
-    %{buildroot}%{_sysconfdir}/dracut.conf.d/07-xfs.conf
-install -D -m 644 etc/dracut.conf.d/11-resume.conf \
-    %{buildroot}%{_sysconfdir}/dracut.conf.d/11-resume.conf
+    %{buildroot}/usr/lib/dracut/dracut.conf.d/07-ext4.conf
+install -D -m 644 usr/lib/dracut/dracut.conf.d/07-virtio.conf \
+    %{buildroot}/usr/lib/dracut/dracut.conf.d/07-virtio.conf
+install -D -m 644 usr/lib/dracut/dracut.conf.d/07-xfs.conf \
+    %{buildroot}/usr/lib/dracut/dracut.conf.d/07-xfs.conf
+install -D -m 644 usr/lib/dracut/dracut.conf.d/11-resume.conf \
+    %{buildroot}usr/lib/dracut/dracut.conf.d/11-resume.conf
 
 %check
 
 %files
 %doc README.md
 %license LICENSE
-%config %{_sysconfdir}/dracut.conf.d/07-aws-type-switch.conf
-%config %{_sysconfdir}/dracut.conf.d/07-nvme.conf
-%config %{_sysconfdir}/dracut.conf.d/07-ext4.conf
-%config %{_sysconfdir}/dracut.conf.d/07-virtio.conf
-%config %{_sysconfdir}/dracut.conf.d/07-xfs.conf
-%config %{_sysconfdir}/dracut.conf.d/11-resume.conf
+%dir /usr/lib/dracut/
+%dir /usr/lib/dracut/dracut.conf.d/
+/usr/lib/dracut/dracut.conf.d/07-aws-type-switch.conf
+/usr/lib/dracut/dracut.conf.d/07-nvme.conf
+/usr/lib/dracut/dracut.conf.d/07-ext4.conf
+/usr/lib/dracut/dracut.conf.d/07-virtio.conf
+/usr/lib/dracut/dracut.conf.d/07-xfs.conf
+/usr/lib/dracut/dracut.conf.d/11-resume.conf
 
 %changelog
