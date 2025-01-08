@@ -41,7 +41,7 @@ install -D -m 644 usr/lib/dracut/dracut.conf.d/07-aws-type-switch.conf \
     %{buildroot}/usr/lib/dracut/dracut.conf.d/07-aws-type-switch.conf
 install -D -m 644 usr/lib/dracut/dracut.conf.d/07-nvme.conf \
     %{buildroot}/usr/lib/dracut/dracut.conf.d/07-nvme.conf
-install -D -m 644 etc/dracut.conf.d/07-ext4.conf \
+install -D -m 644 usr/lib/dracut/dracut.conf.d/07-ext4.conf \
     %{buildroot}/usr/lib/dracut/dracut.conf.d/07-ext4.conf
 install -D -m 644 usr/lib/dracut/dracut.conf.d/07-virtio.conf \
     %{buildroot}/usr/lib/dracut/dracut.conf.d/07-virtio.conf
